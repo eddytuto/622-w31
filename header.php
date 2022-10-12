@@ -38,7 +38,7 @@
 				<p class="site__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$under_description = get_bloginfo( 'description', 'display' );
+			$igc31w_description = get_bloginfo( 'description', 'display' );
 			if ( $igc31w_description || is_customize_preview() ) :
 				?>
 				<p class="site__description"><?php echo $igc31w_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
