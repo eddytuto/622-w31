@@ -22,7 +22,7 @@ get_header();
 		if ( have_posts() ) :
 			/* Start the Loop */
 				the_post(); ?>
-			<h1><?= get_the_title(); ?></h1>
+			<h2><?= get_the_title(); ?></h2>
 			<?php the_content();		
 			endif;	
 		?>
