@@ -15,28 +15,15 @@
 get_header();
 
 ?>
-<h1>Index.php</h1>
+<h1>single.php</h1>
 	<main class="site__main">
 
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */
-			while ( have_posts() ) :
 				the_post(); ?>
 			<h1><?= get_the_title(); ?></h1>
-
-			<?php the_content();
-			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
-			?>
-			
-			<blockquote><?php the_excerpt(); ?></blockquote>
-			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
-			
-			<pre><?php the_category(); ?></pre>
-			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink() ?></pre>
-<?php
-			endwhile;
+			<?php the_content();		
 			endif;	
 		?>
 	</main><!-- #main -->
