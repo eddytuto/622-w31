@@ -32,7 +32,12 @@ get_header();
 				//$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
 				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
 				?>
-			<h1><?= $titre  ?></h1>
+			<header>	
+				<h1><?= $titre  ?></h1>
+				<code>Code du cours:<?= $code_cours  ?></code>
+				<code>Nombre d'heures<?= $heure_cours  ?></code>
+			</header>
+			
 
 			<?php the_content();
 			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
