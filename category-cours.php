@@ -15,15 +15,24 @@
 get_header();
 
 ?>
-<h1>Index.php</h1>
+<h1>category-cours.php</h1>
 	<main class="site__main">
 
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post(); ?>
-			<h1><?= get_the_title(); ?></h1>
+				the_post();
+				$titre = get_the_title();
+				$code_cours = substr($titre,0,7);
+				$heure_cours = substr($titre,strrpos($titre,'('));
+				$titre = substr($titre,8);
+				$longueur = strlen($titre);
+
+				//$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
+				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
+				?>
+			<h1><?= $titre  ?></h1>
 
 			<?php the_content();
 			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
