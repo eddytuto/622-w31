@@ -467,6 +467,7 @@ big {
 
 h1 {
   font-size: clamp(1rem, 5vw, 7rem);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 h2,
@@ -477,6 +478,22 @@ h6 {
   font-family: trebuchet;
 }
 
-h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+h2 {
+  font-size: clamp(0.9rem, 4vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(0.9rem, 3vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(0.8rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(0.7rem, 3vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(0.6rem, 2vw, 2rem);
 }/*# sourceMappingURL=style.css.map */
