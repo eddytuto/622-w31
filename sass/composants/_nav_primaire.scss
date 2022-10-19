@@ -1,0 +1,12 @@
+.menu__primaire {
+	display: flex;
+    justify-content: flex-end;
+}
+
+.menu__primaire .menu {
+	display :flex;
+    justify-content:space-around;
+    margin-left : 12%;
+    flex:1;
+    list-style-type: none;
+}

@@ -496,4 +496,46 @@ h5 {
 
 h6 {
   font-size: clamp(0.6rem, 2vw, 2rem);
+}
+
+/* Composants */
+.menu__primaire {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__primaire .menu {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 12%;
+  flex: 1;
+  list-style-type: none;
+}
+
+/* Layout */
+.site {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+}
+
+.site__header {
+  grid-area: header;
+  background-color: #bbb;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  background-color: #ccc;
+}
+
+.site__sidebar {
+  grid-area: sidebar;
+  background-color: #ddd;
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: #bbb;
 }/*# sourceMappingURL=style.css.map */

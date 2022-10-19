@@ -1,0 +1,31 @@
+.site {
+	display: grid;
+	grid-template-columns: ($size__site-sidebar) auto;
+	grid-template-areas:
+		"header header"
+		"sidebar main"
+		"footer footer";
+}
+
+.site__header {
+	grid-area: header;
+    background-color: #bbb;
+}
+
+.site__main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+    background-color: #ccc;
+}
+
+.site__sidebar {
+	grid-area: sidebar;
+    background-color: #ddd;
+}
+
+.site__footer {
+	grid-area: footer;
+    background-color: #bbb;
+}
+
+// @import "no-sidebar";
