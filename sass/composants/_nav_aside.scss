@@ -1,0 +1,19 @@
+.menu__aside{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.menu__aside .menu{
+    list-style-type: none;
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+
+.menu__aside .menu-item{
+}
+
+.menu__aside .menu-item a{
+    text-decoration: none;
+    padding : 3px 4px;
+}
