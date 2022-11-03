@@ -11,8 +11,11 @@
 
 ?>
 
-	<footer class="site__footer">
-		<h2>Pied de page du 31W</h2>
+	<footer class="site__footer">	
+		<?php get_sidebar( 'footer-1' ); ?>
+		<?php get_sidebar( 'footer-2' ); ?>
+		<?php get_sidebar( 'footer-3' ); ?>
+		<?php get_sidebar( 'footer-4' ); ?>
     </footer><!-- #colophon -->
 </div><!-- #page -->
 

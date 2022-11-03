@@ -15,7 +15,7 @@
 get_header();
 
 ?>
-<h1>category-cours.php</h1>
+<code>category-cours.php</code>
 	<main class="site__main">
 
 		<?php
