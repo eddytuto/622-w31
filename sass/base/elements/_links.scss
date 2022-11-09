@@ -20,3 +20,27 @@ a {
 		outline: 0;
 	}
 }
+
+
+.menu__aside .menu-item a {
+	color: $color__link__menu__aside;
+
+	&:visited {
+		color: $color__link__menu__aside-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link__menu__aside-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

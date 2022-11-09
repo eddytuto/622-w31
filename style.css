@@ -10,6 +10,8 @@ Text Domain: _31w
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 /* Importation des variables */
+/* ------------------------------------------------- Lien standard */
+/* ------------------------------------------------- Lien menu aside */
 /* Normalize */
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -516,11 +518,47 @@ h6 {
   text-decoration: none;
 }
 
+.chkBurger {
+  display: none;
+}
+
+.chkBurger:checked ~ .burger {
+  transform: rotate(90deg);
+}
+
+.chkBurger:checked ~ .menu__aside {
+  transform: translateX(0);
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  transition: transform 0.5s;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
 .menu__aside {
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  position: absolute;
+  top: 30px;
+  transform: translateX(-100vw);
+  transition: transform 0.5s;
+  width: 100vw;
+}
+@media screen and (min-width: 700px) {
+  .menu__aside {
+    position: static;
+    width: 100%;
+    transform: translateX(0);
+  }
 }
 
 .menu__aside .menu {
@@ -532,6 +570,7 @@ h6 {
 .menu__aside .menu-item a {
   text-decoration: none;
   padding: 3px 4px;
+  color: #fff;
 }
 
 .sidebar {
@@ -573,6 +612,7 @@ h6 {
 }
 
 .site__menu {
+  position: relative;
   grid-area: menu;
   background-color: #ddd;
 }
