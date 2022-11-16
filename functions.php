@@ -295,3 +295,27 @@ function my_register_sidebars() {
 
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
+/////////////////////////////////////////////////////////////////  Filtre les choix menu
+/**
+ * Filtre les choix de menu contenant l'option description non vide
+ * Dans ce cas la description est ajouté dans le choix de menu
+ * @param  string $item_output la chaîne qui contient le choix de menu à traiter et qui sera retourner par la fonction
+ * @param object $item l'élément de menu à traiter
+ */
+function prefix_nav_description( $item_output, $item) {
+    // si l'option description est non vide 
+    if ( !empty( $item->description ) ) {
+        // remplace la fermeture de la balise </a> une structure HTML qui incluera la description
+        // La div.menu-item-icone permettra d'inclure un îcone par css avec background-image
+        // var_dump($item_output); 
+        // var_dump($item->class); die();
+        $item_output = str_replace('</a>',
+        '<hr><span class="menu-item-description">' . 
+                          $item->description . 
+                         '</span><div class="menu-item-icone"></div></a>',
+                                    $item_output );
+    }
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
+

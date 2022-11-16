@@ -33,23 +33,18 @@ get_header();
 				$titre = substr($titre, 0, strrpos($titre,'(') - strlen($titre));
 				?>
 			<header>	
-				<h1><?= $titre  ?></h1>
+				<h5><?= $titre  ?></h5>
 				<code>Code du cours:<?= $code_cours  ?></code>
 				<code>Nombre d'heures<?= $heure_cours  ?></code>
 			</header>
 			
 
-			<?php the_content();
+			<?php
 			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
 			?>
 			
-			<blockquote><?php the_excerpt(); ?></blockquote>
-			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
+			<p><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></p>
 			
-			<pre><?php the_category(); ?></pre>
-			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink();  ?></pre>
-			<pre><?php the_author(); ?></pre>
 
 <?php
 			endwhile;
