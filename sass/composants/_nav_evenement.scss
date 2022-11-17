@@ -12,13 +12,29 @@
 .evenement  .menu-item a{
     text-decoration: none;
 }
-
+.menu-item-icone {
+    width : 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+}
 .evenement__stage {
     background-color: aquamarine;
+
 }
+.evenement__stage .menu-item-icone {
+        background-image: url('https://s2.svgbox.net/hero-solid.svg?ic=chip');
+    }
+
 .evenement__projet {
     background-color: #fffd7f;
+   
+    .menu-item-icone {
+        background-image: url('https://s2.svgbox.net/hero-solid.svg?ic=chip');
+    }
 }
 .evenement__porte {
     background-color: rgb(21, 157, 236);
+    .menu-item-icone {
+        background-image: url('https://s2.svgbox.net/hero-solid.svg?ic=chip');
+    }
 }

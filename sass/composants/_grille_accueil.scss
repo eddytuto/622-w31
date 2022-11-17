@@ -1,0 +1,8 @@
+.grille{
+    display : flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.grille__article{
+    flex : 0 1 250px;
+}
