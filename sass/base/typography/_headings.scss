@@ -11,7 +11,8 @@ h2{ font-size : clamp(.9rem, 4vw, 4rem);}
 h3{ font-size : clamp(.9rem, 3vw, 3rem);} 
 h4{ font-size : clamp(.8rem, 3vw, 2rem);} 
 h5{ font-size : clamp(.7rem, 3vw, 2rem);} 
-h6{ font-size : clamp(.6rem, 2vw, 2rem);} 
+h6{ font-size: 0.9rem;
+	font-size: clamp(0.9rem, 0.8300000000000001rem + 0.35vw, 1.25rem);} 
 
 
 

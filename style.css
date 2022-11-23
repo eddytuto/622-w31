@@ -497,7 +497,8 @@ h5 {
 }
 
 h6 {
-  font-size: clamp(0.6rem, 2vw, 2rem);
+  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.83rem + 0.35vw, 1.25rem);
 }
 
 /* Composants */
@@ -624,7 +625,19 @@ h6 {
 }
 
 .grille__article {
-  flex: 0 1 250px;
+  flex: 1 1 250px;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 5px;
+  padding: 3px;
+}
+
+.grille__article h6,
+.grille__article p:nth-last-of-type(1) {
+  margin: 0;
 }
 
 .sidebar {
