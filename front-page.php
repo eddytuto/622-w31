@@ -30,17 +30,7 @@ get_header();
 		if ( have_posts() ) :
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?>
-			<?php
-			 $titre = get_the_title();
-			 $code_cours = substr($titre,0,7);
-			 $heure_cours = substr($titre,strrpos($titre,'('));
-			 $titre = substr($titre,8);
-			 $longueur = strlen($titre);
 
-			 //$titre = substr($titre, strrpos($titre,'(') - strlen($titre));
-			 $titre = substr($titre, 0, strrpos($titre,'(') -  $longueur );
-			 $le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
-			 ?>
 			<?php if (in_category('galerie')): ?>
 				<?php get_template_part( 'template-parts/accueil-galerie', '' ); ?>
 				<?php else: ?>
