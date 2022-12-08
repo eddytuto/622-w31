@@ -33,6 +33,8 @@ get_header();
 
 			<?php if (in_category('galerie')): ?>
 				<?php get_template_part( 'template-parts/accueil-galerie', '' ); ?>
+				<?php elseif('note'): ?>
+				<?php get_template_part( 'template-parts/accueil-note', '' ); ?>
 				<?php else: ?>
 				<?php get_template_part( 'template-parts/accueil-cours', '' ); ?>
 

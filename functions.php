@@ -12,6 +12,10 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+/* Customizer */
+
+require_once("options/apparence.php");
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -39,6 +43,9 @@ function igc31w_setup() {
 		* provide it for us.
 		*/
 	add_theme_support( 'title-tag' );
+
+	/* permet l'utilisation de la fonctionnalité « image mise en avant » */
+	add_theme_support( 'post_thumbnails' );
 
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
@@ -73,7 +80,7 @@ function igc31w_setup() {
 	);
 
 	// Set up the WordPress core custom background feature.
-	/*
+	
 	add_theme_support(
 		'custom-background',
 		apply_filters(
@@ -84,7 +91,7 @@ function igc31w_setup() {
 			)
 		)
 	);
-	*/
+	
 
 	// Add theme support for selective refresh for widgets.
 	// add_theme_support( 'customize-selective-refresh-widgets' );
