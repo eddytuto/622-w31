@@ -45,7 +45,8 @@ function igc31w_setup() {
 	add_theme_support( 'title-tag' );
 
 	/* permet l'utilisation de la fonctionnalité « image mise en avant » */
-	add_theme_support( 'post_thumbnails' );
+
+	add_theme_support( 'post-thumbnails' );
 
 	/*
 		* Enable support for Post Thumbnails on posts and pages.

@@ -7,8 +7,9 @@
 $le_permalien = " <a href='" . get_the_permalink() . "'> Suite </a>";
 ?>
 <article class="grille__article">
-    <h6><?php  the_title();  ?></h6>
+   
+    <h6>-Note-<?php  the_title();  ?></h6>
     <p><?= wp_trim_words(get_the_excerpt(), 10,$le_permalien) ; ?></p>
-    <p>Type de cours:<?php the_field("type_de_cours") ?></p>
+    <p>Type de notes (il faut créer un nouveau groupe):<?php // the_field("type_de_cours") ?></p>
     <p>TIM - Collège de Maisonneuve</p>
 </article>
